@@ -1,0 +1,163 @@
+@font-face {
+	font-family: 'Metropolis';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local(''),
+			url('/fonts/Metropolis-Regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+			url('/fonts/Metropolis-Regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* Metropolis-700*/
+@font-face {
+	font-family: 'Metropolis';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: local(''),
+			url('/fonts/Metropolis-Bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+			url('/fonts/Metropolis-Bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* Metropolis-900*/
+@font-face {
+	font-family: 'Metropolis';
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+	src: local(''),
+			url('/fonts/Metropolis-ExtraBold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+			url('/fonts/Metropolis-ExtraBold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+	font-family: 'Metropolis';
+	font-style: italic;
+	font-weight: 100;
+	font-display: swap;
+	src: local(''),
+			url('/fonts/Metropolis-LightItalic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+			url('/fonts/Metropolis-LightItalic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+// Colors
+:root {
+    --red: hsl(355, 52%, 35%);
+    --blue: hsl(206, 100%, 31%);
+    --black: hsl(0, 0%, 27%);
+    --body: hsl(0, 0%, 27%);
+    --button: hsl(355, 37%, 48%);
+    --button-hover: hsl(355, 41%, 38%);
+	--white: hsl(0, 0%, 95%);
+	--dblue: hsl(212, 64%, 19%);
+	--lblue: hsl(213, 66%, 35%);
+}
+
+:root {
+    --font-metropolis: 'Metropolis', sans-serif;
+}
+
+// Converter; use rem()
+
+@function rem($pixels, $context: 16){
+    @return ($pixels / content) * 1rem;
+}
+
+// Typography
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+// Global
+html {
+    font-size: 100%;
+    font-family: 'Metropolis';
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+	
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+	color: var(--body);
+	overflow-x: hidden !important;
+}
+
+.section {
+padding-top: 5em;
+padding-bottom: 5em;
+}
+.wrapper {
+width: 100%;
+max-width: 22.5em;
+margin: auto;
+}
+.mobile {
+display: block;
+}
+.desktop {
+display: none;
+}
+.skip {
+position: absolute;
+opacity: 0;
+z-index: -1000;
+}
+
+
+p {
+    margin-bottom: 1em;
+}
+p,
+li {
+line-height: 1.5em;
+font-size: clamp(1rem, 1vh, 1.2rem);
+}
+p,
+a,
+li {
+// color: #292929;
+margin: 0;
+line-height: 1.4em;
+font-weight: normal;
+list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin: 0;
+line-height: 1.1em;
+// color: #292929;
+margin-bottom: .7rem;
+}
+.container {
+	padding: 0 0.5em;
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+.button-solid {
+	padding: .7rem;
+	background-color: var(--button);
+	color: var(--white) !important;
+	font-weight: 700;
+	border-radius: 3px;
+	transition: .2s ease;
+	&:hover {
+		background-color: var(--button-hover);
+	}
+}
+
+
