@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local(""), url("/fonts/Metropolis-Regular.woff2") format("woff2"), url("/fonts/Metropolis-Regular.woff") format("woff");
+  src: url("../fonts/Metropolis-Regular.woff2") format("woff2"), url("../fonts/Metropolis-Regular.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* Metropolis-700*/
@@ -12,7 +12,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local(""), url("/fonts/Metropolis-Bold.woff2") format("woff2"), url("/fonts/Metropolis-Bold.woff") format("woff");
+  src: url("../fonts/Metropolis-Bold.woff2") format("woff2"), url("../fonts/Metropolis-Bold.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* Metropolis-900*/
@@ -21,7 +21,7 @@
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: local(""), url("/fonts/Metropolis-ExtraBold.woff2") format("woff2"), url("/fonts/Metropolis-ExtraBold.woff") format("woff");
+  src: url("../fonts/Metropolis-ExtraBold.woff2") format("woff2"), url("../fonts/Metropolis-ExtraBold.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 @font-face {
@@ -29,7 +29,7 @@
   font-style: italic;
   font-weight: 100;
   font-display: swap;
-  src: local(""), url("/fonts/Metropolis-LightItalic.woff2") format("woff2"), url("/fonts/Metropolis-LightItalic.woff") format("woff");
+  src: url("../fonts/Metropolis-LightItalic.woff2") format("woff2"), url("../fonts/Metropolis-LightItalic.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 :root {
@@ -59,7 +59,7 @@ a, a:visited, a:active {
 
 html {
   font-size: 100%;
-  font-family: "Metropolis";
+  font-family: "Metropolis", Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -437,7 +437,7 @@ nav {
     bottom: 0;
     width: 100%;
     height: auto;
-    background: url(/images/bloodbag.png) no-repeat;
+    background: url(../images/bloodbag.png) no-repeat;
     background-position: center;
     opacity: 0.2;
     z-index: -3;
@@ -592,7 +592,7 @@ nav {
     position: relative;
   }
   .events__tablet .events--bg {
-    background: url(/images/volunteer.jpg) center no-repeat;
+    background: url(../images/volunteer.jpg) center no-repeat;
     background-size: cover;
     height: 500px;
     width: 100%;
