@@ -204,10 +204,27 @@ nav {
 .navbar{
     z-index: 10;
     box-shadow: -12px 10px 41px -22px rgba(0,0,0,0.75);
-        ul {
-        position: relative;
-        display: flex;
-        flex-direction: row;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 250px;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+    height: 500px;
+    @include tablet {
+        width: 30%;
+    }
+    @include desktop-s {
+        display: none;
+    }
+    ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0 1em;
     }
     li {
         list-style: none;
@@ -327,31 +344,6 @@ nav {
 }
 
 .navbar {
-    position: fixed;
-    right: -100%;
-    top: 0;
-    width: 50%;
-    transition: 0.5s;
-    display: flex;
-    flex-direction: column;
-    background: white;
-    height: 50vh;
-    @include tablet {
-        width: 30%;
-    }
-    @include desktop-s {
-        display: none;
-    }
-    ul {
-        display: block;
-        margin: auto;
-        text-align: right;
-    }
-    a {
-        &:hover {
-            color: var(--red);
-        }
-    }
 }
 .navbar.active {
     right: 0;

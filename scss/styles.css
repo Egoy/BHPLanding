@@ -179,11 +179,32 @@ nav {
 .navbar {
   z-index: 10;
   box-shadow: -12px 10px 41px -22px rgba(0, 0, 0, 0.75);
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: 250px;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  height: 500px;
+}
+@media only screen and (min-width: 48em) {
+  .navbar {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 64em) {
+  .navbar {
+    display: none;
+  }
 }
 .navbar ul {
-  position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0 1em;
 }
 .navbar li {
   list-style: none;
@@ -304,36 +325,6 @@ nav {
 }
 #toggle.active {
   background: white;
-}
-
-.navbar {
-  position: fixed;
-  right: -100%;
-  top: 0;
-  width: 50%;
-  transition: 0.5s;
-  display: flex;
-  flex-direction: column;
-  background: white;
-  height: 50vh;
-}
-@media only screen and (min-width: 48em) {
-  .navbar {
-    width: 30%;
-  }
-}
-@media only screen and (min-width: 64em) {
-  .navbar {
-    display: none;
-  }
-}
-.navbar ul {
-  display: block;
-  margin: auto;
-  text-align: right;
-}
-.navbar a:hover {
-  color: var(--red);
 }
 
 .navbar.active {
